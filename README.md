@@ -158,13 +158,9 @@ def Function(clf):
     tn_loc = x_test[(yhat_test == 4) & (y_test == 4), 28].sum()
     print(f"Saved Budget: {tn_loc}")
     print(f"PSB: {tn_loc / total_loc}")
-    print(f"PNTN:
-
- {1 - (CM[4][4] / len(x_test))}")
+    print(f"PNTN: {1 - (CM[4][4] / len(x_test))}")
     print(f"Remaining Service Time: {total_loc - tn_loc}")
     print(f"PRST: {1 - (tn_loc / total_loc)}")
-
-Function(LogisticRegression())
 Function(DecisionTreeClassifier())
 ```
 
